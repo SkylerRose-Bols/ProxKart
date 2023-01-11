@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc307dfa0c4c8b4494311f4acc15b12, type: 3}
+  m_Name: SpikyBall
+  m_EditorClassIdentifier: 
+  itemName: SpikyBall
+  itemIcon: {fileID: 7576617242518483205, guid: 5043777b087f5b24e9ad94864a8b3718, type: 3}
+  prefab: {fileID: 8781873615864935876, guid: a941e94f97dff7f4e96c4bbbfe29f95c, type: 3}

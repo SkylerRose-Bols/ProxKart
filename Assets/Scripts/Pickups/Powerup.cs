@@ -20,8 +20,22 @@ public class Powerup : ScriptableObject
                 Byte1 = (byte)user.Object.InputAuthority
             };
 
-            var position = user.itemDropNode.position;
-            var rotation = user.itemDropNode.rotation;
+            // Here we need to check if the user is pushing forward or not
+            // for the time being we will simply spawn everything in front of us
+            var position = user.frontItemDropNode.position;
+            var rotation = user.frontItemDropNode.rotation;
+            
+            if(prefab.GetType() == typeof(SpikyBallPowerup))
+            {
+                position = user.frontItemDropNode.position;
+                rotation = user.frontItemDropNode.rotation;
+            }
+            else
+            {
+                position = user.rearItemDropNode.position;
+                rotation = user.rearItemDropNode.rotation;
+            }
+
 
             var obj = runner.Spawn(prefab, position, rotation, null, null, predictionKey);
             obj.Init(user);

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
@@ -11,11 +8,8 @@ public class BananaPowerup : SpawnedPowerup {
     
     [Networked] public TickTimer CollideTimer { get; set; }
     
-    private void Awake() {
-        //
-        // We start the collider off as disabled, because the object may be predicted, so it takes time for FUN methods
-        // to be called on this object. When the object has Spawned(), then the collider will be enabled.
-        //
+    private void Awake() 
+    {
         collider.enabled = false;
     }
 
@@ -28,6 +22,7 @@ public class BananaPowerup : SpawnedPowerup {
         // We create a timer to count down so that the kart who spawned this object has time to drive away before the 
         // collider enables again. Without this, the person who drops the banana will spin themselves out!
         //
+
         CollideTimer = TickTimer.CreateFromSeconds(Runner, enableDelay);
     }
 
@@ -38,6 +33,7 @@ public class BananaPowerup : SpawnedPowerup {
         // We want to set this every frame because we dont want to accidentally enable this somewhere in code, because
         // that will mess up prediction somewhere.
         //
+
         collider.enabled = CollideTimer.ExpiredOrNotRunning(Runner);
     }
 

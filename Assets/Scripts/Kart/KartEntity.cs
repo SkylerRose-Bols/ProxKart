@@ -33,7 +33,8 @@ public class KartEntity : KartComponent
 	[Networked(OnChanged = nameof(OnCoinCountChangedCallback))]
 	public int CoinCount { get; set; }
 
-	public Transform itemDropNode;
+	public Transform rearItemDropNode;
+	public Transform frontItemDropNode;
 
     private bool _despawned;
 
