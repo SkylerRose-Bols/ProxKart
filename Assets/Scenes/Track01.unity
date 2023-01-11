@@ -9447,21 +9447,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91175dcc15224463780e01a8a98b1b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceDetection: 0
-  voiceDetectionThreshold: 0.01
+  voiceDetection: 1
+  voiceDetectionThreshold: 0
   voiceDetectionDelayMs: 500
   interestGroup: 0
-  debugEchoMode: 0
+  debugEchoMode: 1
   reliableMode: 0
   encrypt: 0
   transmitEnabled: 1
-  samplingRate: 24000
+  samplingRate: 48000
   frameDuration: 20000
   bitrate: 30000
   sourceType: 0
   microphoneType: 1
   audioClip: {fileID: 0}
-  loopAudioClip: 1
+  loopAudioClip: 0
   recordingEnabled: 1
   audioSessionParameters:
     Category: 4
@@ -13469,7 +13469,7 @@ MonoBehaviour:
   statsResetInterval: 1000
   speakerPrefab: {fileID: 4859778021823571545, guid: 54e2b907e1d858d468a6503bbd206b91, type: 3}
   primaryRecorder: {fileID: 826578108}
-  usePrimaryRecorder: 0
+  usePrimaryRecorder: 1
   Settings:
     AppIdRealtime: 
     AppIdFusion: 
