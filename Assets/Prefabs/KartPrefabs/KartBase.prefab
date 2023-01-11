@@ -1488,71 +1488,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4666530418472742581, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666530418472742581, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-      propertyPath: usePrimaryRecorder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666530418472742582, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-      propertyPath: audioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666530418472742582, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-      propertyPath: samplingRate
-      value: 48000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666530418472742582, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-      propertyPath: loopAudioClip
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3431483668771190212, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-    - {fileID: 5342741443292680662, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-    - {fileID: 5586029234098984623, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
-    - {fileID: 4666530418472742582, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
 --- !u!1 &3663994690723896618 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4666530418472742568, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
   m_PrefabInstance: {fileID: 8222384840777708418}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &585149597211239591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3663994690723896618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &3346710502780512004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3663994690723896618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &5948981798970018152
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1667,6 +1609,40 @@ MonoBehaviour:
     Max: 1000
     SpeedUpPerc: 5
   restartOnDeviceChange: 1
+--- !u!114 &585149597211239591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663994690723896618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &3346710502780512004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663994690723896618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3663994690723896630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4666530418472742580, guid: 3daaf751a35fd524e8243458c03d4234, type: 3}
