@@ -65,13 +65,25 @@ namespace Photon.Pun.UtilityScripts
         {
             Debug.Log("OnConnectedToMaster() was called by PUN. This client is now connected to Master Server in region [" + PhotonNetwork.CloudRegion +
                 "] and can join a room. Calling: PhotonNetwork.JoinRandomRoom();");
-            PhotonNetwork.JoinRandomRoom();
+
+            RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers };
+            if (playerTTL >= 0)
+                roomOptions.PlayerTtl = playerTTL;
+
+            PhotonNetwork.JoinOrCreateRoom(PhotonNetwork.CurrentLobby.Name, roomOptions, null);
+
+            //PhotonNetwork.JoinRandomRoom();
         }
 
         public override void OnJoinedLobby()
         {
             Debug.Log("OnJoinedLobby(). This client is now connected to Relay in region [" + PhotonNetwork.CloudRegion + "]. This script now calls: PhotonNetwork.JoinRandomRoom();");
-            PhotonNetwork.JoinRandomRoom();
+            
+            RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers };
+            if (playerTTL >= 0)
+                roomOptions.PlayerTtl = playerTTL;
+
+            PhotonNetwork.JoinOrCreateRoom(PhotonNetwork.CurrentLobby.Name, roomOptions, null);
         }
 
         public override void OnJoinRandomFailed(short returnCode, string message)
