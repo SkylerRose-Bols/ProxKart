@@ -66,11 +66,11 @@ namespace Photon.Pun.UtilityScripts
             Debug.Log("OnConnectedToMaster() was called by PUN. This client is now connected to Master Server in region [" + PhotonNetwork.CloudRegion +
                 "] and can join a room. Calling: PhotonNetwork.JoinRandomRoom();");
 
-            RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers };
-            if (playerTTL >= 0)
-                roomOptions.PlayerTtl = playerTTL;
-
-            PhotonNetwork.JoinOrCreateRoom(PhotonNetwork.CurrentLobby.Name, roomOptions, null);
+            //RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers };
+            //if (playerTTL >= 0)
+            //    roomOptions.PlayerTtl = playerTTL;
+            //
+            //PhotonNetwork.JoinOrCreateRoom(PhotonNetwork.CurrentLobby.Name, roomOptions, null);
 
             //PhotonNetwork.JoinRandomRoom();
         }
