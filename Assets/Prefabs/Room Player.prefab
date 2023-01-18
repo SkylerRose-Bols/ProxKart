@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4121854193405488884}
   - component: {fileID: 4806636907111633646}
   - component: {fileID: 1205363733663734447}
+  - component: {fileID: 3442086090074790316}
+  - component: {fileID: 4322765284404815772}
   m_Layer: 0
   m_Name: Room Player
   m_TagString: Untagged
@@ -102,7 +104,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 3442086090074790316}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -134,3 +137,32 @@ MonoBehaviour:
   Version: 1
   MaxPlayers: 4
   playerTTL: -1
+  lobbyName: 
+--- !u!114 &3442086090074790316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796921125070174998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 0
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &4322765284404815772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796921125070174998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82440ebeacc615d4480b1a275164a50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

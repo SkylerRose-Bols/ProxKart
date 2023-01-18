@@ -4,6 +4,8 @@ using Fusion;
 using Fusion.Sockets;
 using FusionExamples.FusionHelpers;
 using Managers;
+using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -44,7 +46,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks
 
 	public void SetCreateLobby() => _gameMode = GameMode.Host;
 	public void SetJoinLobby() => _gameMode = GameMode.Client;
-	
+
 	public void JoinOrCreateLobby()
 	{
 		SetConnectionStatus(ConnectionStatus.Connecting);
@@ -126,6 +128,9 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks
 		(string status, string message) = ConnectFailedReasonToHuman(reason);
 		_disconnectUI.ShowMessage(status,message);
 	}
+
+	public int playerIndex = 0;
+
 	public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
 	{
 		Debug.Log($"Player {player} Joined!");
@@ -135,6 +140,8 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks
 				runner.Spawn(_gameManagerPrefab, Vector3.zero, Quaternion.identity);
 			var roomPlayer = runner.Spawn(_roomPlayerPrefab, Vector3.zero, Quaternion.identity, player);
 			roomPlayer.GameState = RoomPlayer.EGameState.Lobby;
+			roomPlayer.name = "Player " + playerIndex;
+			playerIndex++;
 		}
 		SetConnectionStatus(ConnectionStatus.Connected);
 	}
