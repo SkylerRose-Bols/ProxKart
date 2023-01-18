@@ -74,17 +74,17 @@ namespace Photon.Pun.UtilityScripts
             Debug.Log("OnConnectedToMaster() was called by PUN. This client is now connected to Master Server in region [" + PhotonNetwork.CloudRegion +
                 "] and can join a room. Calling: PhotonNetwork.JoinRandomRoom();");
 
-            GameManager gm = FindObjectOfType<GameManager>();
-
-            this.MaxPlayers = (byte)gm.MaxUsers;
-
-            lobbyName = gm.LobbyName.ToString();
-
-            RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers};
-            if (playerTTL >= 0)
-                roomOptions.PlayerTtl = playerTTL;
-
-            PhotonNetwork.JoinOrCreateRoom(gm.LobbyName.ToString(), roomOptions, null);
+            //GameManager gm = FindObjectOfType<GameManager>();
+            //
+            //this.MaxPlayers = (byte)gm.MaxUsers;
+            //
+            //lobbyName = gm.LobbyName.ToString();
+            //
+            //RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers};
+            //if (playerTTL >= 0)
+            //    roomOptions.PlayerTtl = playerTTL;
+            //
+            //PhotonNetwork.JoinOrCreateRoom(gm.LobbyName.ToString(), roomOptions, null);
         }
 
         public override void OnJoinedLobby()
