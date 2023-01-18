@@ -55,7 +55,11 @@ namespace Photon.Pun.UtilityScripts
         {
             Debug.Log("ConnectAndJoinRandom.ConnectNow() will now call: PhotonNetwork.ConnectUsingSettings().");
 
-            PhotonNetwork.ConnectUsingSettings();
+            if (!PhotonNetwork.IsConnected)
+            {
+                PhotonNetwork.ConnectUsingSettings();
+            }
+            
             PhotonNetwork.GameVersion = this.Version + "." + SceneManagerHelper.ActiveSceneBuildIndex;
            
         }
@@ -69,11 +73,6 @@ namespace Photon.Pun.UtilityScripts
         {
             Debug.Log("OnConnectedToMaster() was called by PUN. This client is now connected to Master Server in region [" + PhotonNetwork.CloudRegion +
                 "] and can join a room. Calling: PhotonNetwork.JoinRandomRoom();");
-
-            if(PhotonNetwork.IsConnected)
-            {
-                return;
-            }
 
             GameManager gm = FindObjectOfType<GameManager>();
 
