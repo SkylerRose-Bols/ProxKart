@@ -133,41 +133,4 @@ namespace Photon.Pun.UtilityScripts
             //Debug.Log("Joined Room: " + PhotonNetwork.CurrentLobby.Name);
         }
     }
-
-
-    //#if UNITY_EDITOR
-    //[CanEditMultipleObjects]
-    //[CustomEditor(typeof(ConnectAndJoinRandom), true)]
-    //public class ConnectAndJoinRandomInspector : Editor
-    //{
-    //    void OnEnable() { EditorApplication.update += Update; }
-    //    void OnDisable() { EditorApplication.update -= Update; }
-
-    //    bool isConnectedCache = false;
-
-    //    void Update()
-    //    {
-    //        if (this.isConnectedCache != PhotonNetwork.IsConnected)
-    //        {
-    //            this.Repaint();
-    //        }
-    //    }
-
-    //    public override void OnInspectorGUI()
-    //    {
-    //        this.isConnectedCache = !PhotonNetwork.IsConnected;
-
-
-    //        this.DrawDefaultInspector(); // Draw the normal inspector
-
-    //        if (Application.isPlaying && !PhotonNetwork.IsConnected)
-    //        {
-    //            if (GUILayout.Button("Connect"))
-    //            {
-    //                ((ConnectAndJoinRandom)this.target).ConnectNow();
-    //            }
-    //        }
-    //    }
-    //}
-    //#endif
 }
