@@ -55,10 +55,7 @@ namespace Photon.Pun.UtilityScripts
         {
             Debug.Log("ConnectAndJoinRandom.ConnectNow() will now call: PhotonNetwork.ConnectUsingSettings().");
 
-            if(!PhotonNetwork.IsConnected)
-            {
-                PhotonNetwork.ConnectUsingSettings();
-            }
+            PhotonNetwork.ConnectUsingSettings();
             PhotonNetwork.GameVersion = this.Version + "." + SceneManagerHelper.ActiveSceneBuildIndex;
            
         }
@@ -73,17 +70,22 @@ namespace Photon.Pun.UtilityScripts
             Debug.Log("OnConnectedToMaster() was called by PUN. This client is now connected to Master Server in region [" + PhotonNetwork.CloudRegion +
                 "] and can join a room. Calling: PhotonNetwork.JoinRandomRoom();");
 
-            //GameManager gm = FindObjectOfType<GameManager>();
+            if(PhotonNetwork.IsConnected)
+            {
+                return;
+            }
 
-            //this.MaxPlayers = (byte)gm.MaxUsers;
+            GameManager gm = FindObjectOfType<GameManager>();
 
-            //lobbyName = gm.LobbyName.ToString();
+            this.MaxPlayers = (byte)gm.MaxUsers;
 
-            //RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers};
-            //if (playerTTL >= 0)
-            //    roomOptions.PlayerTtl = playerTTL;
+            lobbyName = gm.LobbyName.ToString();
 
-            //PhotonNetwork.JoinOrCreateRoom(gm.LobbyName.ToString(), roomOptions, null);
+            RoomOptions roomOptions = new RoomOptions() { MaxPlayers = this.MaxPlayers};
+            if (playerTTL >= 0)
+                roomOptions.PlayerTtl = playerTTL;
+
+            PhotonNetwork.JoinOrCreateRoom(gm.LobbyName.ToString(), roomOptions, null);
         }
 
         public override void OnJoinedLobby()

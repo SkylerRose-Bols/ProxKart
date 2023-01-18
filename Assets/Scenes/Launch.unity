@@ -22021,6 +22021,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5565203122976307857, guid: f87ea1b0d58347047a1995bce4f6c7a5, type: 3}
+      propertyPath: powerups.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565203122976307857, guid: f87ea1b0d58347047a1995bce4f6c7a5, type: 3}
+      propertyPath: powerups.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: cea68da0a33ae0b49bbb6b024711b47f, type: 2}
     - target: {fileID: 5565203122976307858, guid: f87ea1b0d58347047a1995bce4f6c7a5, type: 3}
       propertyPath: m_Name
       value: Resource Manager
@@ -30421,7 +30429,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   interestGroup: 0
-  debugEchoMode: 0
+  debugEchoMode: 1
   reliableMode: 0
   encrypt: 0
   transmitEnabled: 1

@@ -136,7 +136,7 @@ MonoBehaviour:
   AutoConnect: 1
   Version: 1
   MaxPlayers: 4
-  playerTTL: -1
+  playerTTL: 0
   lobbyName: 
 --- !u!114 &3442086090074790316
 MonoBehaviour:
