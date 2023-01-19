@@ -15,12 +15,11 @@ public class ParentingHelper : MonoBehaviour
             {
                 if (name.Contains("p#" + i + 1))
                 {
-                    if (networkObjects[i].Id.Raw == i + 3)
+                    if (networkObjects[i].Id.Raw.ToString() == (i + 3).ToString())
                     {
                         transform.parent = networkObjects[i].transform;
                         transfered = true;
                     }
-
                 }
             }
         }
