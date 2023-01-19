@@ -30429,7 +30429,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   interestGroup: 0
-  debugEchoMode: 1
+  debugEchoMode: 0
   reliableMode: 0
   encrypt: 0
   transmitEnabled: 1
@@ -33892,7 +33892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1350.2491, y: -31.45}
+  m_AnchoredPosition: {x: 1350.2491, y: -31.449951}
   m_SizeDelta: {x: 2700.4983, y: 62.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762577939
